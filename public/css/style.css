@@ -9,6 +9,11 @@
     --border-radius: 10px;
 }
 
+a {color: black;}
+h1{font-size: var(--font-size-xl); }
+h2{font-size: var(--font-size-lg); }
+h3{font-size: var(--font-size-md); }
+
 body{
 font-family: "Spicy Rice", serif; 
 color: black;
