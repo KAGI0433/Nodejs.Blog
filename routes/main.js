@@ -6,4 +6,11 @@ router.get('', (req, res) => {
     res.render('index');
 });
 
+
+router.get('/individualpost', (req, res) => {
+    res.render('individualpost');
+});
+
+
+
 module.exports = router;
