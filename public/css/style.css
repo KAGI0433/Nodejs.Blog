@@ -239,8 +239,26 @@ img{
     filter:none;
 }
 
+.pagination{
+    font-size: 1.3rem;
+    color: red;
+    text-decoration: none;
+    margin-top: 40px;
+    display: inline-block,
+}
+
+.pagination:hover{
+    color:black;
+}
+
 .article {
     white-space: pre-wrap;
+}
+
+/*footer*/
+.footer{
+    margin: 4rem;
+    text-align: center;
 }
 
 
