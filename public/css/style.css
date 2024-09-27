@@ -200,6 +200,14 @@ img{
     display: inline-block;
 }
 
+.article-ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 18px 0;
+}
+
 
 
 
