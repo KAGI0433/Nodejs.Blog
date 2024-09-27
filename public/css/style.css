@@ -134,7 +134,28 @@ img{
    border: 2px solid black;
 }
 
+/*header -> navigation */
 
+.header__nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.header__nav ul a{
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+.header__nav ul a:hover{
+    text-decoration: underline;
+}
+.header__nav ul a.active{
+    color: red;
+}
 
 
 
