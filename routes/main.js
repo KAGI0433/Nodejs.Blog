@@ -38,12 +38,36 @@ router.get('', async (req, res) => {
     } catch (error) {
         console.log(error);
 
-    }
-
-
-    
+    } 
         
 });
+
+/**
+* GET /
+* Post :id
+*/
+router.get('/post/:id', async (req, res) => {  
+    try{
+       let slug =req.params.id;
+   
+        const data = await Post.findById({ _id: slug }); 
+        
+        const locals = {
+            title : data.title,
+            description: "Blog created with Nodejs, Express & MongoDb"
+        }
+
+        res.render('post', {locals, data});
+    } catch (error) {
+        console.log(error);
+
+    }
+    
+
+    });
+
+
+
 
 
 
