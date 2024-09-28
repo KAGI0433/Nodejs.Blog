@@ -1,10 +1,37 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('./models/post');
 
-//Routes
-router.get('', (req, res) => {
-    res.render('index');
+/**
+ * GET /
+ * HOME
+ */
+
+
+
+router.get('', async (req, res) => { 
+    try {
+    const locals = {
+        title : "NodeJs Blog",
+        description: "Blog created with Nodejs, Express & MongoDb"
+    }
+
+    
+        const data = await Post.find(); 
+        res.render('index', {locals, data});
+     } catch (error) {
+         console.log(error);
+     }
+
+
+
+   
 });
+
+
+
+
+
 
 
 router.get('/individualpost', (req, res) => {
@@ -18,3 +45,36 @@ router.get('/newpostform', (req, res) => {
 
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+function insertPostData () {
+    Post.insertMany([{
+        title: "Building a Blog",
+        body: "This is the body text"
+    },
+    {
+        title: "Building a Blog",
+        body: "This is the body text" 
+    },
+    {
+        title: "Building a Blog",
+        body: "This is the body text"
+
+    },
+    {
+        title: "Building a Blog",
+        body: "This is the body text"
+    }
+])
+}
+insertPostData();
+
