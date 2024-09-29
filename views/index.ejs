@@ -10,11 +10,11 @@
         <h1>Latest Posts</h1>
     
 <% posts.forEach(Post => { %>
-    
+
         <div class="card mt-3">
             <div class="card-body">
               <p class="text-muted">Published at<%= Post.createdAt %></p>
-              <h5 class="card-title">Post title <%= Post.title %></h5>
+              <h5 class="card-title"><%= Post.title %></h5>
               <p class="card-text"> <%= Post.content.slice(0, 99) %></p>
               <a href="#" class="btn btn-primary">Read More.</a>
             </div>
