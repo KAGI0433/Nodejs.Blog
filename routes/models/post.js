@@ -6,18 +6,15 @@ const PostSchema = new Schema({
         type: String,
         require: true
     },
-    body: {
+    content: {
         type:String,
         require: true
     },
     createdAt: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: new Date().toString()
     },
-    updatedAt: {
-        type: Date,
-        default: Date.now
-    },
+   
 
 });
 
