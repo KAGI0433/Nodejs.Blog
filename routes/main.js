@@ -80,11 +80,10 @@ router.get('/post/:id', async (req, res) => {
          let searchTerm = req.searchTerm;
          const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "")
  
-         const data = await this.post.find({
+         const data = await Post.find({
             $or: [
-                { title: { $regex: new RegExp(searchNoSpecialChar, i)}},
-                { body: { $regex: new RegExp(searchNoSpecialChar, i)}}
-
+                { title: { $regex: new RegExp(searchNoSpecialChar, 'i')}},
+                
             ]
          });
 
