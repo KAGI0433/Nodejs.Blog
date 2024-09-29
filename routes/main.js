@@ -119,8 +119,8 @@ router.get('/individualpost', (req, res) => {
     res.render('individualpost');
 });
 
-router.get('/newpostform', (req, res) => {
-    res.render('newpostform');
+router.get('/newpost', (req, res) => {
+    res.render('newpost');
 });
 
 
