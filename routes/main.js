@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('./models/post');
+const { connection } = require('mongoose');
 
 /**
  * GET /
@@ -30,6 +31,26 @@ router.get("/post/:id", async(req, res) => {
     res.render("individualpost", { post: getPost});
 
 });
+
+router.get("/delete/:id", (req,res) => {
+
+     const { id } =req.params;
+
+     Post.deleteOne({_id: id})
+     .then(() => {
+        console.log("deleted Post successfully!")
+
+        res.redirect("/");
+     })
+     .catch((err) => console.log(err));
+})
+
+
+
+router.get("/edit/:id", (req,res) => {
+    
+})
+
 
 router.get('/individualpost', (req, res) => {
     res.render('individualpost');
