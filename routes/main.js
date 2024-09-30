@@ -17,7 +17,19 @@ router.get('/', async (req, res) => {
 });
 
 
+router.get('/post', (req, res) => {
+    res.render('post');
+});
 
+router.get("/post/:id", async(req, res) => {
+
+    const { id } = req.params;
+
+    const getPost = await Post.findOne({ _id: id});
+
+    res.render("individualpost", { post: getPost});
+
+});
 
 router.get('/individualpost', (req, res) => {
     res.render('individualpost');
