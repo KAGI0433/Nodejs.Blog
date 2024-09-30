@@ -47,10 +47,9 @@ router.get("/delete/:id", (req,res) => {
 
 
 
-router.get("/edit/:id", (req,res) => {
-    
-})
-
+router.get('/contact', (req, res) => {
+    res.render('contact');
+});
 
 router.get('/individualpost', (req, res) => {
     res.render('individualpost');

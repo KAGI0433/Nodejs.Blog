@@ -11,14 +11,23 @@
     
 <% posts.forEach(Post => { %>
 
-        <div class="card mt-3">
+        <div class="card"> 
+          
+          <h5 class="card-title"><%= Post.title %></h5>
+
             <div class="card-body">
-              <p class="text-muted">Published at<%= Post.createdAt %></p>
-              <h5 class="card-title"><%= Post.title %></h5>
+             
               <p class="card-text"> <%= Post.content.slice(0, 99) %></p>
+              
+              <p class="text-muted">Published at<%= Post.createdAt %></p>
+
+              
               <a href="/post/<%= Post._id %>" class="btn btn-primary">Read More.</a> 
-              <a href="/delete/<%= Post._id %>" class="btn btn-primary btn-danger">Delete</a>
+              <a href="/delete/<%= Post._id %>" class="btn btn-primary2">Delete</a>
             </div>
+
+              
+           
           </div>
 
 <%}) %>

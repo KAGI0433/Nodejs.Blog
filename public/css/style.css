@@ -26,7 +26,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"],
-select,
+
 textarea {
     font-family: "Spicy Rice", serif; 
     font-size: var(--font-size-base);
@@ -47,11 +47,6 @@ textarea {
     cursor: pointer;
 }
 
-.btn-delete {
-    padding: 10px 16px;
-    background-color: red;
-}
-
 img{
     width: 100%;
     height:auto;
@@ -64,13 +59,9 @@ img{
     padding: 0 10px;
 }
 
-.main{
-    padding: 20px 0;
-}
-
 /*hero section*/
 .hero-image{
-    max-height: 528px;
+    max-height: 328px;
     filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
     overflow: hidden;
     border-radius: var(--border-radius);
@@ -177,13 +168,20 @@ img{
     margin: 5px 0 40px 0;
 }
 
+
+.card{
+    background-color: pink;
+    tex-align: center;   
+
+}
+
 /*home article list*/
-.article__heading{
+.card-title{
     margin-top: 4rem;
     font-weight: 400;
 }
 
-.article-ul{
+.card-body{
     list-style-type:none;
     padding: 0;
     margin: 0;
@@ -192,66 +190,58 @@ img{
     flex-direction: column;
 }
 
-.article-list__date {
+.text-muted {
     font-size: var(--font-size-base);
     color: red;
     width:260px;
     display: inline-block;
 }
 
-.article-ul li a{
-    display: flex;
-    flex-direction: column;
+.btn.btn-primary{
+    color: white;
+    background-color: blue;
     justify-content: space-between;
-    text-decoration: none;
-    margin: 18px 0;
+    margin: 4px;
+    max-width: 110px;
+    padding: 1rem 1.5rem;
+    border-radius: 40px;
+    
+}
+.btn.btn-primary2{
+    color: white;
+    background-color: red;
+    justify-content: space-between;
+    margin: 6px;
+    max-width: 50px;
+    padding: 1rem 1.5rem;
+    border-radius: 40px;
+    
 }
 
+
 @media only screen and (min-width: 768px) {
-    .article-ul li a{
-        flex-direction: row;
+    .card-body {
+        flex-direction: column;
+        display: grid;
         align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 10px;
+
     }
-    .article-list__date{
+    .text-muted{
         text-align: right;
     }
 }
 
-.article-ul li{
-    font-size: 24px;
+.card-title{
+    font-size: 34px;
     cursor: pointer;
     transition: filter 0.1s;
 }
 
-.article-ul li:not(:last-child){
-    border-bottom: 1px solid light grey;
-}
 
-.article-ul li: hover {
-    filter: none,
-}
-
-.article-ul:hover li {
-    filter: blur(3px);
-}
-
-.article-ul:hover li:hover{
-    filter:none;
-}
-
-.pagination{
-    font-size: 1.3rem;
-    color: red;
-    text-decoration: none;
-    margin-top: 40px;
-    display: inline-block,
-}
-
-.pagination:hover{
-    color:black;
-}
-
-.article {
+.card-body {
     white-space: pre-wrap;
 }
 
@@ -271,60 +261,4 @@ img{
     left: 0;
     right: 0;
 }
-
->searchBar.open{
-    transform: translatey(0);
-    transition: transform 0.1s;
-}
-
-.searchBar input{
-    margin: 0;
-    padding: 0;
-}
-
-#searchClose{
-    position: absolute;
-    top: 0;
-    right:0;
-    color: red;
-    padding: 15px;
-}
-
-/*dashboard admin*/
-.admin-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.admin-post{
-    padding: 0;
-    margin: 0;
-}
-
-.admin-post-controls form{
-    display: inline-block;
-}
-
-.admin-post-controls-btn{
-    display: inline-block;
-    background-color: black;
-    color: grey;
-    border: 0;
-    text-decoration: none;
-    font-size: .8rem;
-    padding: 4px 8px;
-    line-height: 2;
-}
-
-.admin-post li{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-
-
-
-
 
